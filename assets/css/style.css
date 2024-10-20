@@ -1,4 +1,4 @@
-﻿@import url('../../css2');
+@import url('../../css2');
 @import url('../../css2-1');
 @import url('../../css2-2');
 *, *::before, *::after {
@@ -20,8 +20,11 @@ body {
     font-family: "Poppins", sans-serif;
     background-color: #000000;
     opacity: 0;
-    animation: fadeToVisible 6.5s ease forwards;
+    animation: fadeToVisible 6.5s ease forwards; 
+
 }
+
+
 
 /* Scroll Bar */
 
@@ -409,31 +412,21 @@ section.services .content .boxes .box a:hover {
     }
 }
 
-@keyframes spooky {
-    from {
-        transform: translatey(.55em);
-    }
-    to {
-        transform: translatey(-.05em);
-    }
-}
-
-
 @keyframes fadeToVisible {
     0% {
-        opacity: 0; /* Invisível no começo */
+        opacity: 0; 
     }
     100% {
-        opacity: 1; /* Visível ao final da animação */
+        opacity: 1; 
     }
 }
 
-/* Atraso nas animações dos outros elementos */
+
 section.main, header nav {
-    animation-delay: 1.5s; /* Atrasa a animação para esperar o body clarear */
+    animation-delay: 1.5s; 
 }
 
-/* Preserva as animações dos outros elementos */
+
 @keyframes fadeInUp {
     from {
         transform: translate3d(0, 150px, 0);
@@ -456,12 +449,19 @@ section.main, header nav {
     }
 }
 
-/* Adiciona transição suave ao fundo */
 html {
     background-color: #000000;
     transition: background-color 1.5s ease;
 }
 
+@keyframes spooky {
+    from {
+        transform: translatey(.55em);
+    }
+    to {
+        transform: translatey(-.05em);
+    }
+}
 
 @keyframes typewriter {
     from {
