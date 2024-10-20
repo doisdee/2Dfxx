@@ -19,7 +19,8 @@ body {
     color: #ffffff;
     font-family: "Poppins", sans-serif;
     background-color: #000000;
-
+    opacity: 0;
+    animation: fadeToVisible 6.5s ease forwards;
 }
 
 /* Scroll Bar */
@@ -416,6 +417,51 @@ section.services .content .boxes .box a:hover {
         transform: translatey(-.05em);
     }
 }
+
+
+@keyframes fadeToVisible {
+    0% {
+        opacity: 0; /* Invisível no começo */
+    }
+    100% {
+        opacity: 1; /* Visível ao final da animação */
+    }
+}
+
+/* Atraso nas animações dos outros elementos */
+section.main, header nav {
+    animation-delay: 1.5s; /* Atrasa a animação para esperar o body clarear */
+}
+
+/* Preserva as animações dos outros elementos */
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0, 150px, 0);
+        opacity: 0;
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        transform: translate3d(0, -150px, 0);
+        opacity: 0;
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+/* Adiciona transição suave ao fundo */
+html {
+    background-color: #000000;
+    transition: background-color 1.5s ease;
+}
+
 
 @keyframes typewriter {
     from {
